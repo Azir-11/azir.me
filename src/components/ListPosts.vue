@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { Post } from '~/types'
 import { useRouter } from 'vue-router/auto'
-import { englishOnly, formatDate } from '~/logics'
+import { chineseOnly, formatDate } from '~/logics'
 
 const props = defineProps<{
   type?: string
@@ -28,7 +28,7 @@ const routes: Post[] = router.getRoutes()
 const posts = computed(() =>
   [...(props.posts || routes), ...props.extra || []]
     .sort((a, b) => +new Date(b.date) - +new Date(a.date))
-    .filter(i => !englishOnly.value || !i.lang || i.lang === 'en'),
+    .filter(i => !chineseOnly.value || !i.lang || i.lang === 'zh'),
 )
 
 const getYear = (a: Date | string | number) => new Date(a).getFullYear()
@@ -41,6 +41,10 @@ function isSameGroup(a: Post, b?: Post) {
 function getGroupName(p: Post) {
   if (isFuture(p.date))
     return 'Upcoming'
+
+  console.log('p', p)
+  console.log('p.date', p.date)
+  console.log('getYear(p.date)', getYear(p.date))
   return getYear(p.date)
 }
 </script>
@@ -87,10 +91,10 @@ function getGroupName(p: Post) {
           <li class="no-underline" flex="~ col md:row gap-2 md:items-center">
             <div class="title text-lg leading-1.2em" flex="~ gap-2 wrap">
               <span
-                v-if="route.lang === 'zh'"
+                v-if="route.lang === 'en'"
                 align-middle flex-none
                 class="text-xs bg-zinc:15 text-zinc5 rounded px-1 py-0.5 ml--12 mr2 my-auto hidden md:block"
-              >中文</span>
+              >英语</span>
               <span
                 v-if="route.lang === 'ja'"
                 align-middle flex-none

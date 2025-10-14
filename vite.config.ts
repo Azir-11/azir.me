@@ -150,6 +150,9 @@ export default defineConfig({
             'Netlify': { link: 'https://netlify.com', imageUrl: 'https://github.com/netlify.png' },
             'Stackblitz': { link: 'https://stackblitz.com', imageUrl: 'https://github.com/stackblitz.png' },
             'Vercel': { link: 'https://vercel.com', imageUrl: 'https://github.com/vercel.png' },
+            'SoybeanJS': { link: 'https://github.com/soybeanjs', imageUrl: 'https://avatars.githubusercontent.com/u/119996361?s=200&v=4' },
+            'FlippedAurora': { link: 'https://github.com/flipped-aurora', imageUrl: 'https://avatars.githubusercontent.com/u/63276650?s=200&v=4' },
+            'Vectutil': { link: 'https://github.com/Vectutil', imageUrl: 'https://avatars.githubusercontent.com/u/224289848?s=200&v=4' },
           },
           imageOverrides: [
             ['https://github.com/vuejs/core', 'https://vuejs.org/logo.svg'],
