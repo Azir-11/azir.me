@@ -106,7 +106,8 @@ const ArtComponent = computed(() => {
       v-if="frontmatter.date"
       class="opacity-50 !-mt-6 slide-enter-50"
     >
-      {{ formatDate(frontmatter.date, false) }} <span v-if="frontmatter.duration">· {{ frontmatter.duration }}</span>
+      {{ formatDate(frontmatter.date, false) }}
+      <span v-if="frontmatter.duration">· {{ frontmatter.duration }}</span>
     </p>
     <p v-if="frontmatter.place" class="mt--4!">
       <span op50>at </span>
@@ -117,6 +118,22 @@ const ArtComponent = computed(() => {
         {{ frontmatter.place }}
       </span>
     </p>
+    <div v-if="frontmatter.ai" class="opacity-50 !-mt-6 flex justify-end slide-enter-50 text-xs">
+      <span>Proportion of AI: {{ frontmatter.ai }}</span>
+      <VTooltip>
+        <button
+          class="inline-flex items-center justify-center ml-1 w-4 h-4 rounded-full border border-current opacity-60 hover:opacity-100 transition-opacity"
+          aria-label="AI proportion information"
+        >
+          <span class="text-xs leading-none">?</span>
+        </button>
+        <template #popper>
+          <div class="max-w-xs text-sm">
+            所有内容都是由作者书写，这个占比表示的是利用 AI 进行润色、查错、检查后修改的内容所占的大概比例。
+          </div>
+        </template>
+      </VTooltip>
+    </div>
     <p
       v-if="frontmatter.subtitle"
       class="opacity-50 !-mt-6 italic slide-enter"
