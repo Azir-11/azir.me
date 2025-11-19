@@ -23,10 +23,12 @@ const routes: Post[] = router.getRoutes()
     upcoming: i.meta.frontmatter.upcoming,
     redirect: i.meta.frontmatter.redirect,
     place: i.meta.frontmatter.place,
+    hide: i.meta.frontmatter.hide,
   }))
 
 const posts = computed(() =>
   [...(props.posts || routes), ...props.extra || []]
+    .filter(i => !i.hide)
     .sort((a, b) => +new Date(b.date) - +new Date(a.date))
     .filter(i => !chineseOnly.value || !i.lang || i.lang === 'zh'),
 )
@@ -42,9 +44,6 @@ function getGroupName(p: Post) {
   if (isFuture(p.date))
     return 'Upcoming'
 
-  console.log('p', p)
-  console.log('p.date', p.date)
-  console.log('getYear(p.date)', getYear(p.date))
   return getYear(p.date)
 }
 </script>
@@ -95,11 +94,6 @@ function getGroupName(p: Post) {
                 align-middle flex-none
                 class="text-xs bg-zinc:15 text-zinc5 rounded px-1 py-0.5 ml--12 mr2 my-auto hidden md:block"
               >英语</span>
-              <span
-                v-if="route.lang === 'ja'"
-                align-middle flex-none
-                class="text-xs bg-zinc:15 text-zinc5 rounded px-1 py-0.5 ml--15 mr2 my-auto hidden md:block"
-              >日本語</span>
               <span align-middle>{{ route.title }}</span>
               <span
                 v-if="route.redirect"

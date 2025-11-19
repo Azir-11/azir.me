@@ -20,24 +20,13 @@ declare module 'vue-router/auto-routes' {
   export interface RouteNamedMap {
     '/': RouteRecordInfo<'/', '/', Record<never, never>, Record<never, never>>,
     '/[...404]': RouteRecordInfo<'/[...404]', '/:404(.*)', { 404: ParamValue<true> }, { 404: ParamValue<false> }>,
-    '/bar': RouteRecordInfo<'/bar', '/bar', Record<never, never>, Record<never, never>>,
-    '/bookmarks': RouteRecordInfo<'/bookmarks', '/bookmarks', Record<never, never>, Record<never, never>>,
-    '/chat': RouteRecordInfo<'/chat', '/chat', Record<never, never>, Record<never, never>>,
-    '/chat-zh': RouteRecordInfo<'/chat-zh', '/chat-zh', Record<never, never>, Record<never, never>>,
-    '/collective-sponsor-onetime': RouteRecordInfo<'/collective-sponsor-onetime', '/collective-sponsor-onetime', Record<never, never>, Record<never, never>>,
-    '/demos': RouteRecordInfo<'/demos', '/demos', Record<never, never>, Record<never, never>>,
-    '/giving-talks': RouteRecordInfo<'/giving-talks', '/giving-talks', Record<never, never>, Record<never, never>>,
     '/media': RouteRecordInfo<'/media', '/media', Record<never, never>, Record<never, never>>,
     '/notes': RouteRecordInfo<'/notes', '/notes', Record<never, never>, Record<never, never>>,
     '/photos': RouteRecordInfo<'/photos', '/photos', Record<never, never>, Record<never, never>>,
-    '/podcasts': RouteRecordInfo<'/podcasts', '/podcasts', Record<never, never>, Record<never, never>>,
     '/posts/': RouteRecordInfo<'/posts/', '/posts', Record<never, never>, Record<never, never>>,
     '/posts/ai-and-mental-models': RouteRecordInfo<'/posts/ai-and-mental-models', '/posts/ai-and-mental-models', Record<never, never>, Record<never, never>>,
-    '/posts/windicss-and-tailwind-jit': RouteRecordInfo<'/posts/windicss-and-tailwind-jit', '/posts/windicss-and-tailwind-jit', Record<never, never>, Record<never, never>>,
+    '/posts/compare-tech': RouteRecordInfo<'/posts/compare-tech', '/posts/compare-tech', Record<never, never>, Record<never, never>>,
     '/projects': RouteRecordInfo<'/projects', '/projects', Record<never, never>, Record<never, never>>,
-    '/sponsors-list': RouteRecordInfo<'/sponsors-list', '/sponsors-list', Record<never, never>, Record<never, never>>,
-    '/streams': RouteRecordInfo<'/streams', '/streams', Record<never, never>, Record<never, never>>,
-    '/use': RouteRecordInfo<'/use', '/use', Record<never, never>, Record<never, never>>,
   }
 
   /**
@@ -59,34 +48,6 @@ declare module 'vue-router/auto-routes' {
       routes: '/[...404]'
       views: never
     }
-    'pages/bar.md': {
-      routes: '/bar'
-      views: never
-    }
-    'pages/bookmarks.md': {
-      routes: '/bookmarks'
-      views: never
-    }
-    'pages/chat.md': {
-      routes: '/chat'
-      views: never
-    }
-    'pages/chat-zh.md': {
-      routes: '/chat-zh'
-      views: never
-    }
-    'pages/collective-sponsor-onetime.md': {
-      routes: '/collective-sponsor-onetime'
-      views: never
-    }
-    'pages/demos.md': {
-      routes: '/demos'
-      views: never
-    }
-    'pages/giving-talks.md': {
-      routes: '/giving-talks'
-      views: never
-    }
     'pages/media.md': {
       routes: '/media'
       views: never
@@ -99,10 +60,6 @@ declare module 'vue-router/auto-routes' {
       routes: '/photos'
       views: never
     }
-    'pages/podcasts.md': {
-      routes: '/podcasts'
-      views: never
-    }
     'pages/posts/index.md': {
       routes: '/posts/'
       views: never
@@ -111,24 +68,12 @@ declare module 'vue-router/auto-routes' {
       routes: '/posts/ai-and-mental-models'
       views: never
     }
-    'pages/posts/windicss-and-tailwind-jit.md': {
-      routes: '/posts/windicss-and-tailwind-jit'
+    'pages/posts/compare-tech.md': {
+      routes: '/posts/compare-tech'
       views: never
     }
     'pages/projects.md': {
       routes: '/projects'
-      views: never
-    }
-    'pages/sponsors-list.md': {
-      routes: '/sponsors-list'
-      views: never
-    }
-    'pages/streams.md': {
-      routes: '/streams'
-      views: never
-    }
-    'pages/use.md': {
-      routes: '/use'
       views: never
     }
   }
