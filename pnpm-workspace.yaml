@@ -1,5 +1,7 @@
 packages: []
 
+catalog:
+  '@soybeanjs/cli': ^1.4.1
 catalogs:
   build:
     '@shikijs/markdown-it': ^3.12.2
