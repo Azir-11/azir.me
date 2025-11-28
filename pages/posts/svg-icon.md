@@ -11,6 +11,9 @@ duration: 10min
 ## 1. 核心功能
 
 - **Iconify 支持**: 集成 `@iconify/vue`，支持海量图标库。
+  - 一些可以挑图标的网站：
+    - [https://icon-sets.iconify.design/](https://icon-sets.iconify.design/)
+    - [https://icones.js.org/](https://icones.js.org/)
 - **本地 SVG 支持**: 集成 `vite-plugin-svg-icons`，支持加载本地 SVG 文件。
 - **智能回退**: 优先渲染本地图标，未找到则尝试渲染 Iconify 图标。
 

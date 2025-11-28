@@ -26,6 +26,7 @@ declare module 'vue-router/auto-routes' {
     '/posts/': RouteRecordInfo<'/posts/', '/posts', Record<never, never>, Record<never, never>>,
     '/posts/ai-and-mental-models': RouteRecordInfo<'/posts/ai-and-mental-models', '/posts/ai-and-mental-models', Record<never, never>, Record<never, never>>,
     '/posts/compare-tech': RouteRecordInfo<'/posts/compare-tech', '/posts/compare-tech', Record<never, never>, Record<never, never>>,
+    '/posts/svg-icon': RouteRecordInfo<'/posts/svg-icon', '/posts/svg-icon', Record<never, never>, Record<never, never>>,
     '/projects': RouteRecordInfo<'/projects', '/projects', Record<never, never>, Record<never, never>>,
   }
 
@@ -70,6 +71,10 @@ declare module 'vue-router/auto-routes' {
     }
     'pages/posts/compare-tech.md': {
       routes: '/posts/compare-tech'
+      views: never
+    }
+    'pages/posts/svg-icon.md': {
+      routes: '/posts/svg-icon'
       views: never
     }
     'pages/projects.md': {
