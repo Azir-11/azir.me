@@ -6,8 +6,6 @@ lang: zh
 duration: 10min
 ---
 
-# SvgIcon 组件集成指南
-
 本文档详细说明了如何将 [soybean-admin](https://github.com/soybeanjs/soybean-admin) 的 `SvgIcon` 组件集成到其他项目中。该组件支持 Iconify 在线/离线图标以及本地 SVG 图标。
 
 ## 1. 核心功能
@@ -86,8 +84,6 @@ const renderLocalIcon = computed(() => props.localIcon || !props.icon)
     <Icon v-if="icon" :icon="icon" v-bind="bindAttrs" />
   </template>
 </template>
-
-<style scoped></style>
 ```
 
 ## 4. Vite 配置 (`vite.config.ts`)
